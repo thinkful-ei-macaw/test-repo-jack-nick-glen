@@ -1,5 +1,6 @@
 'use strict';
-function createGreeting(){
-console.log('Hi my name is Nicholas and I\'m 102.');
+function createGreeting() {
+    return 'Hi my name is Nicholas and I\'m 102.';
 }
-createGreeting();
+const greeting1 = createGreeting();
+console.log(greeting1);
