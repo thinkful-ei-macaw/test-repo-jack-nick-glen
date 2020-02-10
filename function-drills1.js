@@ -10,7 +10,7 @@ function getYearOfBirth(age) {
 }
 
 function createGreeting(name, age) {
-    if (typeof name === 'string' || typeof age === 'number') {
+    if (typeof name !== 'string' || typeof age !== 'number') {
         throw new Error("Arguments not valid");
     } else {
         const yob = getYearOfBirth(age);
@@ -18,7 +18,7 @@ function createGreeting(name, age) {
     }
 }
 try {
-    const greeting1 = createGreeting('Jack', "blargh");
+    const greeting1 = createGreeting('Jack', 29);
     console.log(greeting1);
 } catch (e) {
     console.log(e.message);
